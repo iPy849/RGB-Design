@@ -1,0 +1,110 @@
+body {
+  background-color: #fff;
+  font-family: "Nunito", sans-serif;
+}
+
+@keyframes bg_hue {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+  }
+  to {
+    -webkit-filter: hue-rotate(-360deg);
+  }
+}
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  background-image: -webkit-linear-gradient(92deg, #050505, #181717);
+  animation: bg_hue 20s infinite;
+}
+nav ul {
+  list-style: none;
+}
+nav div:first-child {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  align-items: flex-start;
+}
+nav div:first-child .brand img {
+  padding-top: 0.5rem;
+  width: 64px;
+  height: 64px;
+}
+nav div:first-child .burger {
+  display: none;
+}
+nav div:first-child .burger div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav div:first-child .burger .burger-icon {
+  margin: 1.5rem 0;
+  border: 0;
+  width: 40px;
+  font-size: 1.6rem;
+  outline: none;
+  background-color: transparent;
+  color: #8D99AE;
+}
+nav div:first-child .burger ul {
+  display: block;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+nav div:first-child .burger ul > li {
+  margin: 1rem;
+}
+nav div:first-child .burger ul > li > a {
+  color: #8D99AE;
+  text-decoration: none;
+  text-align: center;
+}
+nav div:last-child .nav-links ul {
+  padding: 0;
+  display: flex;
+  background-color: transparent;
+}
+nav div:last-child .nav-links ul > li {
+  padding: 0.5rem;
+  margin: 0.3rem;
+  border-radius: 5px;
+  border: 1px solid #8D99AE;
+  transition: transform 0.2s;
+}
+nav div:last-child .nav-links ul > li > a {
+  color: #55C1FF;
+  text-decoration: none;
+}
+nav div:last-child .nav-links ul > li > a:hover {
+  text-shadow: 0 0 3px #55C1FF;
+}
+nav div:last-child .nav-links ul > li:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 600px) {
+  nav {
+    min-height: 10vh;
+  }
+
+  nav div:first-child {
+    width: 100%;
+  }
+  nav div:first-child .burger {
+    display: block;
+  }
+
+  nav > div:last-child {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=layout.css.map */

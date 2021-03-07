@@ -1,0 +1,181 @@
+section:first-of-type {
+  padding-top: 1rem;
+}
+
+section {
+  padding-top: 3rem;
+  margin: 1rem 15vw;
+}
+section h1 {
+  position: relative;
+  display: block;
+  font-weight: bold;
+  overflow: hidden;
+  padding: 0.5rem;
+  text-align: center;
+  width: fit-content;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2.5rem;
+  margin: 0;
+  margin-top: 1rem;
+}
+section h1:before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 5px;
+  width: 0%;
+  background-color: #102E4A;
+  transform-origin: right;
+  transition: all 0.5s ease;
+  transform: skewY(-0.5deg);
+}
+section ul {
+  padding: 0;
+  list-style: none;
+}
+section ul li {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 0;
+}
+section ul li .mapouter {
+  align-self: center;
+  width: 100%;
+}
+section ul a {
+  color: #55C1FF;
+  text-decoration: none;
+}
+section p {
+  font-size: 1.4rem;
+  text-align: start;
+}
+section p .text-span {
+  transition: all 0.2s ease;
+}
+section p .text-span:hover {
+  background-color: #E8DB7D90;
+  border-radius: 5px;
+}
+section #staff {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  border-radius: 15px;
+  overflow: hidden;
+}
+section #staff .staff-img {
+  height: 400px;
+  flex: 25%;
+  background-position: center;
+  background-size: cover;
+  transition: 0.5s;
+  position: relative;
+}
+section #staff .staff-img p {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.5s;
+  color: transparent;
+}
+section #staff .staff-img[data-hover=true] {
+  flex: 50%;
+}
+section #staff .staff-img[data-hover=true] p {
+  color: white;
+}
+section #staff .staff-img[data-hover=false] {
+  flex: 15%;
+}
+
+.section:hover h1::before {
+  width: 100%;
+}
+
+#gallery {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+#gallery a {
+  display: block;
+  width: calc(100% / 4);
+  flex: 22%;
+  margin: 5px;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+}
+#gallery a img {
+  width: 100%;
+  height: auto;
+  transition: 0.5s;
+}
+#gallery a p {
+  display: block;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  color: #050505;
+  padding: 5px;
+  margin: 0;
+  width: fit-content;
+  max-width: 80%;
+  max-height: 20px;
+  text-overflow: clip;
+  font-size: 0.6rem;
+  border-radius: 10px;
+}
+#gallery a:hover {
+  box-shadow: 0 0 5px 1px #050505;
+}
+#gallery a:hover img {
+  transform: rotateZ(10deg) scale(1.2);
+}
+
+@media screen and (max-width: 769px) {
+  section {
+    margin: 1rem 1rem;
+  }
+  section #staff .staff-img {
+    border-radius: 15px;
+    margin-bottom: 10px;
+    height: 300px;
+  }
+  section #staff .staff-img p {
+    color: white;
+  }
+  section #staff .staff-img[data-hover=true], section #staff .staff-img[data-hover=false] {
+    flex: 100%;
+  }
+
+  #gallery a {
+    width: calc(100% / 3);
+    flex: 31%;
+  }
+}
+@media screen and (max-width: 568px) {
+  #gallery a {
+    width: calc(100% / 2);
+    flex: 48%;
+  }
+}
+@media screen and (max-width: 375px) {
+  #gallery a {
+    width: 100%;
+    flex: 100%;
+  }
+}
+
+/*# sourceMappingURL=gallery.css.map */
